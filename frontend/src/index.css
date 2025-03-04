@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gray-950 text-gray-100;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.blue-glow {
+  @apply relative;
+}
+
+.blue-glow::before {
+  content: '';
+  @apply absolute -z-10 rounded-full bg-primary-500/20 blur-[100px] w-[300px] h-[300px];
+}
+
+.blue-glow-sm::before {
+  @apply w-[150px] h-[150px];
+}
+
+.blue-glow-lg::before {
+  @apply w-[500px] h-[500px];
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-300 to-primary-500;
+}
+
+.btn-primary {
+  @apply bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200;
+}
+
+.btn-outline {
+  @apply border border-primary-500 text-primary-300 hover:bg-primary-500/10 font-medium py-2 px-6 rounded-lg transition-all duration-200;
+}
+
+.card {
+  @apply bg-dark-900/80 backdrop-blur-sm border border-dark-700/50 rounded-xl p-6;
+}
